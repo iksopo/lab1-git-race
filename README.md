@@ -33,4 +33,7 @@ Try running with sudo:
 ```
 $ sudo docker-compose up
 ```
-By default, local port 8080 is used to deploy the app, however, it can be modified in ``docker-compose.yml``, setting ``8080:8080`` to ``<your-port>:8080``.
+
+Now you can access [the website](http://localhost:8080/) to check if everything works correctly.
+
+**Note:** By default, local port 8080 is used to deploy the app, however, it can be modified in ``docker-compose.yml``, setting ``8080:8080`` to ``<your-port>:8080``.
