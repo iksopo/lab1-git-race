@@ -11,29 +11,11 @@ Some ideas for obtaining a :gift: if you are the first that:
 - **Home improvement II**: Use an endpoint that returns the message and update the HTML in client side (no MVC server side)
 - **Home improvement III**: Use moder JS framework (React) and a Restful web service (no MVC server side)
 
-User name | NIA | Travis-CI|Score
+User name | NIA | CI |Score
 ----------|-----|----------|-----
 [UNIZAR-30246-WebEngineering](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race) |30246 | [![Build Status](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/UNIZAR-30246-WebEngineering/lab1-git-race/actions/workflows/ci.yml)
+[Isaac Velasco Calvo](https://github.com/pkmniako/lab1-git-race) | 758986 | [![Build Status](https://github.com/pkmniako/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/pkmniako/lab1-git-race/actions/workflows/ci.yml)
+[Jaime Conchello](https://github.com/jaimecb/lab1-git-race) | 776012 | [![Build Status](https://github.com/jaimecb/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/jaimecb/lab1-git-race/actions/workflows/ci.yml)
+[Mateo Vallejo Domínguez](https://github.com/CursedR3N/lab1-git-race) |780029 | [![Build Status](https://github.com/CursedR3N/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/CursedR3N/lab1-git-race/actions/workflows/ci.yml)
+[Alejandro Artal](https://github.com/Alejandro-Artal/lab1-git-race) | 775929 | [![Build Status](https://github.com/Alejandro-Artal/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Alejandro-Artal/lab1-git-race/actions/workflows/ci.yml)
 [Óscar Pueyo Ciutad](https://github.com/iksopo) | 780378 | [![Build Status](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml)
-
-# Deployment using docker-compose
-In order to run the app, you will need the following tools:
-- [docker](https://docs.docker.com/engine/install/)
-- [docker-compose](https://docs.docker.com/compose/install)
-
-Run the following command to build the images if needed and run the app:
-```
-$ docker-compose up
-```
-It might show the following error:
-```
-ERROR: Couldn't connect to Docker daemon at [...]
-```
-Try running with sudo:
-```
-$ sudo docker-compose up
-```
-
-Now you can access [the website](http://localhost:8080/) to check if everything works correctly.
-
-**Note:** By default, local port 8080 is used to deploy the app, however, it can be modified in ``docker-compose.yml``, setting ``8080:8080`` to ``<your-port>:8080``.
