@@ -5,6 +5,10 @@
 The file `src/main/controller/HelloController.kts` contains the implementation of the controller of this web application following the MVC pattern.
 The handler function `welcome()` serves the view `src/main/resources/templates/welcome.html`.
 
+## Error
+
+The file `error.html` is a custom error page which is under `src/main/resources/templates/` for Spring MVC to detecting it automatically. The model variable `error` is passed to the view `error.html` to know what kind of error ocurred.
+
 ## Gradle Configuration
 
 Gradle is a tool for automating building.  
@@ -109,3 +113,35 @@ $ sudo docker-compose up
 Now you can access [the website](http://localhost:8080/) to check if everything works correctly.
 
 **Note:** By default, local port 8080 is used to deploy the app, however, it can be modified in ``docker-compose.yml``, setting ``8080:8080`` to ``<your-port>:8080``.
+## With Heroku
+
+> In order to deploy the app, you will need `git` and `heroku` CLI installed in your machine.
+
+Detailed instructions can be found [here](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote).
+
+---
+
+First of all, create an empty app:
+
+```bash
+$ heroku create
+Creating app... done, ⬢ thawing-inlet-61413
+https://thawing-inlet-61413.herokuapp.com/ | https://git.heroku.com/thawing-inlet-61413.git
+```
+
+Save the url, it will be needed.
+
+Now, add a remote to your local repository with the `heroku git:remote` CLI command. All you need is your Heroku app's name:
+
+```bash
+$ heroku git:remote -a thawing-inlet-61413
+set git remote heroku to https://git.heroku.com/thawing-inlet-61413.git
+```
+
+Deploy the code!
+
+```bash
+git push heroku master
+```
+
+Do not be afraid of detaching the `push` command, it won't cancel the build and the app will be deployed anyways.
