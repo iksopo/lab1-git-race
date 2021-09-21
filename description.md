@@ -1,5 +1,30 @@
 # Documentation
 
+## Set up
+
+For building and running the app you will need the next resources:
+
+- Kotlin, you can get it following the next [web](https://kotlinlang.org/docs/command-line.html)
+- Java11, you can easily download it in the official oracle web or use alternatives libraries such as <https://adoptopenjdk.net/>
+
+## Building the app
+
+For building it you only have to use the tool `gradlew`, for listing all the options use the tasks command.
+
+On the list you will see two important commands: `build` and `bootRun`, the first for building and the other for running the aplication.
+
+For checking if it works you can find the next page on <http://localhost:8080>:
+
+![image](https://user-images.githubusercontent.com/46299278/133663363-de39b281-131e-4c4e-8e35-e32b4c5c18a5.png)
+
+## Testing the app
+
+for testing all the unitary test run the command:
+
+```bash
+gradelw check
+```
+
 ## Controller
 
 The file `src/main/controller/HelloController.kts` contains the implementation of the controller of this web application following the MVC pattern.
@@ -145,3 +170,42 @@ git push heroku master
 ```
 
 Do not be afraid of detaching the `push` command, it won't cancel the build and the app will be deployed anyways.
+
+## How to deploy with Dockerfile
+
+It's very simple, just follow the following steps:
+
+1. Run following commands. This if going to create the image that we need:
+
+   ```bash
+   docker pull gradle:openj9
+   docker build -t lab1-git-race .
+   ```
+
+1. If all went correctly, a image has been created (Image ID and Size may be different):
+
+    ```bash
+    $ docker images
+    REPOSITORY      TAG       IMAGE ID       CREATED          SIZE
+    lab1-git-race   latest    6de6b5e29bda   1 minutes ago   709MB
+    ```
+
+1. Finally, the following command run the container and is going to link the port 8080 of the container with the port 8080 of the host. This can be changed for example `5000:8080` to link the port 8080 of the container with the port 5000 of the host.
+
+    ```bash
+    docker run -p 8080:8080 lab1-git-race
+    ```
+
+## Alternative approach
+
+For runnicng the app inside a container run the next command:
+
+```bash
+docker run --expose=8080 --network="host" --rm -u gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle gradle bootRun
+```
+
+If you get permision denied try to use root privileges or adding you user to the docker group for using it without sudo.
+
+```bash
+sudo usermod -aG docker $USER`
+```
