@@ -5,7 +5,6 @@ Please, go to the [Wiki](https://github.com/UNIZAR-30246-WebEngineering/lab1-git
 Some ideas for obtaining a :gift: if you are the first that:
 
 - **Moby Dick**: Use Docker to run the app
-- **Moby Dick II**: Use Docker Compose to run the app
 - **Moby Dick III**: Use Kubernetes (minikube) to run the app
 - **Home improvement**: Use a markup template language different from Thymeleaf (server side)
 - **Home improvement II**: Use an endpoint that returns the message and update the HTML in client side (no MVC server side)
@@ -22,4 +21,4 @@ User name | NIA | CI |Score
 [Jorge Laguna](https://github.com/topopelon/lab1-git-race) | 735550 | [![Build Status](https://github.com/topopelon/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/topopelon/lab1-git-race/actions/workflows/ci.yml) | half :gift:
 [Carlos Navarro Gascón](https://github.com/Lulay7/lab1-git-race) |780180 | [![Build Status](https://github.com/Lulay7/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/Lulay7/lab1-git-race/actions/workflows/ci.yml)
 [German Garces](https://github.com/fntkg/lab1-git-race)| 757024 | [![Build Status](https://github.com/fntkg/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/fntkg/lab1-git-race/actions/workflows/ci.yml) | :gift: candidate
-[Óscar Pueyo Ciutad](https://github.com/iksopo) | 780378 | [![Build Status](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml)
+[Óscar Pueyo Ciutad](https://github.com/iksopo) | 780378 | [![Build Status](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml/badge.svg)](https://github.com/iksopo/lab1-git-race/actions/workflows/ci.yml) | **Moby Dick II** :gift:
